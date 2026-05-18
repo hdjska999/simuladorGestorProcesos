@@ -7,11 +7,11 @@
 ### Información del Curso
 - **Materia:** Sistemas Operativos
 - **Institución:** Universidad Autónoma de Tamaulipas
-- **Semestre:** 6to
+- **Semestre:** 2026-1
 - **Profesor:** Muñoz Quintero Dante Adolfo
 
 ### Integrantes del Equipo
-- Álvarez Gutiérrez Karla Sofía
+- Alvarez Gutierrez Karla Sofia
 - Lopez Luna Carlos Adrián
 - Méndez Padrón Gustavo Emanuel
 - Reyes del Ángel Ramón
