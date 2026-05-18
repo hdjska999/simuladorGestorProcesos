@@ -3,57 +3,52 @@
 
 #include "Process.h"
 #include "ResourceManager.h"
-#include <vector>
+#include <queue> //std::queue en Round Robin
 #include <string>
-#include <queue> // Agregado para usar std::queue en Round Robin
+#include <vector>
 
-// =============================================
-//  Algoritmos de planificacion disponibles
-// =============================================
+// Los algoritmos de planificacion disponibles en etiquetas para una mejor
+// redaccion
 enum Algorithm {
-    FCFS,       // First Come First Served
-    SJF,        // Shortest Job First
-    ROUND_ROBIN,// Round Robin
-    PRIORITY    // Planificacion por prioridad
+  FCFS,        // First Come First Served
+  SJF,         // Shortest Job First
+  ROUND_ROBIN, // Round Robin
+  PRIORITY     // Prioridad
 };
 
-// =============================================
-//  Entrada del log de eventos del sistema
-// =============================================
+// Guarda en qué momento pasó (tick) y qué fue lo que pasó (event)
 struct LogEntry {
-    int tick;
-    std::string event;
+  int tick;
+  std::string event;
 };
 
-// =============================================
-//  Planificador de Procesos
-// =============================================
+// Clase Planificador
 class Scheduler {
-private:
-    std::vector<Process> processes;  // Todos los procesos del sistema
-    std::vector<LogEntry> eventLog;  // Log de eventos del simulador
-    Algorithm algorithm;             // Algoritmo activo
+private:                          // Motor interno, no interactua con el usuario
+  std::vector<Process> processes; // Lista de todos los procesos del sistema
+  std::vector<LogEntry>
+      eventLog; // Lista de todos los mensajes de los eventos del simulador
+  Algorithm algorithm; // Es el algoritmo activo al momento
 
-    int currentTick;                 // Reloj global del sistema
-    int quantum;                     // Quantum para Round Robin
+  int currentTick; // Reloj global del sistema
+  int quantum;     // Quantum especifico para Round Robin
 
-    // --- Helpers internos ---
-    void log(std::string msg);
-    void printTable();
-    void printStats();
+  void log(std::string msg); // Para crear un logentry y añadirselo a la lista
+  void printTable();
+  void printStats();
 
-    // --- Motores de cada algoritmo ---
-    void runFCFS(ResourceManager& rm);
-    void runSJF(ResourceManager& rm);
-    void runRoundRobin(ResourceManager& rm);
-    void runPriority(ResourceManager& rm);
+  // Motores
+  void runFCFS(ResourceManager &rm);
+  void runSJF(ResourceManager &rm);
+  void runRoundRobin(ResourceManager &rm);
+  void runPriority(ResourceManager &rm);
 
 public:
-    Scheduler(Algorithm algo, int q);
+  Scheduler(Algorithm algo, int q); // Constructor
 
-    void addProcess(Process p);
-    void run(ResourceManager& rm);      // Lanza la simulacion completa
-    void printEventLog();               // Muestra el log al final
+  void addProcess(Process p);    // Agregar un proceso al sistema
+  void run(ResourceManager &rm); // Lanza la simulacion completa
+  void printEventLog();          // Muestra el log al final
 };
 
 #endif // SCHEDULER_H
