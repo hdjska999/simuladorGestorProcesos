@@ -4,19 +4,21 @@
 
 ---
 
-### 📚 Información del Curso
+### Información del Curso
 - **Materia:** Sistemas Operativos
-- **Institución:** [Nombre de la Universidad o Institución]
-- **Semestre:** Semestre 2026-1
-- **Profesor:** [Nombre del Profesor]
+- **Institución:** Universidad Autónoma de Tamaulipas
+- **Semestre:** 6to
+- **Profesor:** Muñoz Quintero Dante Adolfo
 
-### 👥 Integrantes del Equipo
-- [Nombre del integrante 1]
-- [Nombre del integrante 2]
+### Integrantes del Equipo
+- Álvarez Gutiérrez Karla Sofía
+- Lopez Luna Carlos Adrián
+- Méndez Padrón Gustavo Emanuel
+- Reyes del Ángel Ramón
 
 ---
 
-### 🚀 Características Implementadas
+### Características Implementadas
 
 1. **Algoritmos de Planificación:**
    - **FCFS** (First-Come, First-Served).
@@ -38,12 +40,12 @@
 4. **IPC (Comunicación entre procesos):**
    - Sistema base de paso de mensajes usando buzones (`MessageQueue`).
 
-### 🛠️ Tecnologías y Requisitos
+### Tecnologías y Requisitos
 - **Lenguaje:** C++17
 - **Herramientas de Construcción:** CMake (versión mínima 3.29)
 - **Entorno recomendado:** CLion, Visual Studio o terminal (g++ / MinGW en Windows).
 
-### ⚙️ Cómo compilar y ejecutar
+### Cómo compilar y ejecutar
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/hdjska999/simuladorGestorProcesos.git
