@@ -13,7 +13,7 @@ void Menu::showWelcome() {
     cout << "\n";
     cout << "  ╔══════════════════════════════════════════════════════╗" << endl;
     cout << "  ║        SIMULADOR DE GESTOR DE PROCESOS               ║" << endl;
-    cout << "  ║            Sistemas Operativos - 2025                ║" << endl;
+    cout << "  ║            Sistemas Operativos - 2026                ║" << endl;
     cout << "  ╠══════════════════════════════════════════════════════╣" << endl;
     cout << "  ║  Tick de reloj = 1 unidad de tiempo del SO           ║" << endl;
     cout << "  ║  RAM total del sistema = 4096 MB                     ║" << endl;
